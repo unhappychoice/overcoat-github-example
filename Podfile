@@ -2,7 +2,7 @@
 # platform :ios, '6.0'
 
 target 'OvercoatExample' do
-
+  pod 'Overcoat'
 end
 
 target 'OvercoatExampleTests' do
