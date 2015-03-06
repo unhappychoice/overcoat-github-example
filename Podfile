@@ -3,6 +3,7 @@
 
 target 'OvercoatExample' do
   pod 'Overcoat'
+  pod 'Overcoat/PromiseKit'
 end
 
 target 'OvercoatExampleTests' do
