@@ -10,4 +10,15 @@
 
 @implementation GithubUser
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"userID": @"id",
+             @"avatarURL": @"avatar_url",
+             };
+}
+
++ (NSValueTransformer *)avatarURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
 @end

@@ -8,6 +8,10 @@
 
 #import "OVCHTTPSessionManager.h"
 
+@class PMKPromise;
+
 @interface GithubClient : OVCHTTPSessionManager
+
+- (PMKPromise *)fetchRandomUsers;
 
 @end

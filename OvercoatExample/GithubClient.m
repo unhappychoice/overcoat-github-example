@@ -7,7 +7,31 @@
 //
 
 #import "GithubClient.h"
+#import "GithubUser.h"
+#import <Overcoat/Overcoat.h>
+#import <Overcoat/PromiseKit+Overcoat.h>
 
 @implementation GithubClient
+
+- (instancetype)init {
+    self = [super initWithBaseURL:[NSURL URLWithString:@"https://api.github.com/"]];
+    return self;
+}
+
++ (NSDictionary *)modelClassesByResourcePath {
+    return @{
+             @"users": [GithubUser class]
+             };
+}
+
+- (PMKPromise *)fetchRandomUsers {
+    NSInteger index = arc4random() % 100000 + 100000;
+    NSDictionary *params = @{@"since": [NSNumber numberWithInteger:index] };
+    return [self GET:@"users" parameters:params].then(^(OVCResponse *response) {
+        return response.result;
+    }).catch(^(NSError *error){
+        NSLog(@"%@", error);
+    });
+}
 
 @end
