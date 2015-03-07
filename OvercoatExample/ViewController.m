@@ -9,27 +9,37 @@
 #import "ViewController.h"
 #import "GithubClient.h"
 #import "GithubUser.h"
+#import "GithubUsersDataSource.h"
 #import <Overcoat/Overcoat.h>
 #import <Overcoat/PromiseKit+Overcoat.h>
 
 @interface ViewController ()
-@property(strong, nonatomic)GithubClient *client;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) GithubClient *client;
+@property (strong, nonatomic) GithubUsersDataSource *dataSource;
 @end
 
 @implementation ViewController
 
+# pragma mark - lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _client = [GithubClient new];
-    [_client fetchRandomUsers].then(^(NSArray *users){
-        for (GithubUser *user in users) {
-            NSLog(@"%@", user);
-        }
-    });
+    [self loadUsers];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+# pragma mark - private
+
+- (void)loadUsers {
+    _client = [GithubClient new];
+    [_client fetchRandomUsers].then(^(NSArray *users){
+        _dataSource = [[GithubUsersDataSource alloc] initWithUsers:users];
+        _tableView.dataSource = _dataSource;
+        [_tableView reloadData];
+    });
+}
 @end
