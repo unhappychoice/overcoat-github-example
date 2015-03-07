@@ -8,6 +8,7 @@
 
 #import "GithubUsersDataSource.h"
 #import "GithubUser.h"
+#import "GithubUserCell.h"
 
 @interface GithubUsersDataSource()
 @property (strong, nonatomic) NSArray *users;
@@ -28,13 +29,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellIdentifier = @"user";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    GithubUserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"user"];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [GithubUserCell new];
     }
-    GithubUser *user = _users[indexPath.row];
-    cell.textLabel.text = user.name;
+    
+    [cell setUser:_users[indexPath.row]];
     return cell;
 }
+
 @end
