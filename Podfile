@@ -4,6 +4,7 @@
 target 'OvercoatExample' do
   pod 'Overcoat'
   pod 'Overcoat/PromiseKit'
+  pod 'SDWebImage'
 end
 
 target 'OvercoatExampleTests' do
