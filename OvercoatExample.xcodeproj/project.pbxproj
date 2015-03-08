@@ -18,6 +18,7 @@
 		54939B941AA9DD5E00653CDD /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54939B931AA9DD5E00653CDD /* GithubUser.m */; };
 		54F9B79A1AAAE0080091C68B /* GithubUsersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9B7991AAAE0080091C68B /* GithubUsersDataSource.m */; };
 		54F9B79D1AAAEC430091C68B /* GithubUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9B79C1AAAEC430091C68B /* GithubUserCell.m */; };
+		54F9B7A01AACB3480091C68B /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9B79F1AACB3480091C68B /* UserViewController.m */; };
 		AEC2296FB0713A4AA4EB4C59 /* libPods-OvercoatExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 520D5FBC5F1EDBFD893EC1CE /* libPods-OvercoatExample.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		54F9B7991AAAE0080091C68B /* GithubUsersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubUsersDataSource.m; sourceTree = "<group>"; };
 		54F9B79B1AAAEC430091C68B /* GithubUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubUserCell.h; sourceTree = "<group>"; };
 		54F9B79C1AAAEC430091C68B /* GithubUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubUserCell.m; sourceTree = "<group>"; };
+		54F9B79E1AACB3480091C68B /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		54F9B79F1AACB3480091C68B /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		6C360E70B8EC84818BD7C429 /* Pods-OvercoatExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercoatExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-OvercoatExample/Pods-OvercoatExample.release.xcconfig"; sourceTree = "<group>"; };
 		B523D509BA8A35FC548DA418 /* Pods-OvercoatExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvercoatExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OvercoatExample/Pods-OvercoatExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +107,8 @@
 				542A1A931AA9D9B200EE06D3 /* AppDelegate.m */,
 				542A1A951AA9D9B200EE06D3 /* ViewController.h */,
 				542A1A961AA9D9B200EE06D3 /* ViewController.m */,
+				54F9B79E1AACB3480091C68B /* UserViewController.h */,
+				54F9B79F1AACB3480091C68B /* UserViewController.m */,
 				54939B8F1AA9DC4300653CDD /* GithubClient.h */,
 				54939B901AA9DC4300653CDD /* GithubClient.m */,
 				54939B921AA9DD5E00653CDD /* GithubUser.h */,
@@ -303,6 +308,7 @@
 				542A1A941AA9D9B200EE06D3 /* AppDelegate.m in Sources */,
 				54F9B79D1AAAEC430091C68B /* GithubUserCell.m in Sources */,
 				542A1A911AA9D9B200EE06D3 /* main.m in Sources */,
+				54F9B7A01AACB3480091C68B /* UserViewController.m in Sources */,
 				54939B941AA9DD5E00653CDD /* GithubUser.m in Sources */,
 				54939B911AA9DC4300653CDD /* GithubClient.m in Sources */,
 			);

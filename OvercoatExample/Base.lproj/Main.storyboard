@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1117" y="285"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="uXe-Nn-xq3">
             <objects>
-                <viewController id="iHj-CI-XKf" sceneMemberID="viewController">
+                <viewController id="iHj-CI-XKf" customClass="UserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="77v-qh-9Z9"/>
                         <viewControllerLayoutGuide type="bottom" id="gt6-ba-7q0"/>
