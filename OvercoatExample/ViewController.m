@@ -13,7 +13,7 @@
 #import <Overcoat/Overcoat.h>
 #import <Overcoat/PromiseKit+Overcoat.h>
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) GithubClient *client;
 @property (strong, nonatomic) GithubUsersDataSource *dataSource;
@@ -26,10 +26,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadUsers];
+    _tableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+# pragma mark - table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"userProfile" sender:self];
 }
 
 # pragma mark - private

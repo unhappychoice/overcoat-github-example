@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" id="w1h-2P-HQF"/>
                     <connections>
                         <outlet property="tableView" destination="PsT-e0-RJv" id="udd-cS-daa"/>
-                        <segue destination="iHj-CI-XKf" kind="show" id="wkQ-wE-Lt1"/>
+                        <segue destination="iHj-CI-XKf" kind="show" identifier="userProfile" id="wkQ-wE-Lt1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
