@@ -80,6 +80,9 @@
                             <constraint firstItem="EnP-a8-Xp9" firstAttribute="leading" secondItem="6Th-m6-gtH" secondAttribute="leading" id="nh9-df-nD7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="EnP-a8-Xp9" id="nKB-QM-EzA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qf-C6-xHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
