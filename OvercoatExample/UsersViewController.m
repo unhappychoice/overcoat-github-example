@@ -6,20 +6,20 @@
 //  Copyright (c) 2015年 yudo. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "UsersViewController.h"
 #import "GithubClient.h"
 #import "GithubUser.h"
 #import "GithubUsersDataSource.h"
 #import <Overcoat/Overcoat.h>
 #import <Overcoat/PromiseKit+Overcoat.h>
 
-@interface ViewController () <UITableViewDelegate>
+@interface UsersViewController () <UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) GithubClient *client;
 @property (strong, nonatomic) GithubUsersDataSource *dataSource;
 @end
 
-@implementation ViewController
+@implementation UsersViewController
 
 # pragma mark - lifecycle
 
