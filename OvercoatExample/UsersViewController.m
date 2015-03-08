@@ -10,6 +10,7 @@
 #import "GithubClient.h"
 #import "GithubUser.h"
 #import "GithubUsersDataSource.h"
+#import "UserViewController.h"
 #import <Overcoat/Overcoat.h>
 #import <Overcoat/PromiseKit+Overcoat.h>
 
@@ -31,6 +32,15 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"userProfile"]) {
+        NSIndexPath *selectedPath = self.tableView.indexPathForSelectedRow;
+        GithubUser *user = self.dataSource.users[selectedPath.row];
+        UserViewController *c = (UserViewController *)segue.destinationViewController;
+        c.user = user;
+    }
 }
 
 # pragma mark - table view delegate

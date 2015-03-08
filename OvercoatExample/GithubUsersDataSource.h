@@ -10,6 +10,8 @@
 
 @interface GithubUsersDataSource : NSObject <UITableViewDataSource>
 
+@property (strong, nonatomic) NSArray *users;
+
 - (instancetype)initWithUsers:(NSArray *)users;
 
 @end

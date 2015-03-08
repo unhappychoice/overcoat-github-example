@@ -10,10 +10,6 @@
 #import "GithubUser.h"
 #import "GithubUserCell.h"
 
-@interface GithubUsersDataSource()
-@property (strong, nonatomic) NSArray *users;
-@end
-
 @implementation GithubUsersDataSource
 
 - (instancetype)initWithUsers:(NSArray *)users {

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class GithubUser;
+
 @interface UserViewController : UIViewController
+
+@property (strong, nonatomic) GithubUser *user;
 
 @end
