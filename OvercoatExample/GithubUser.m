@@ -14,8 +14,13 @@
     return @{
              @"userID": @"id",
              @"name": @"login",
+             @"url": @"html_url",
              @"avatarURL": @"avatar_url",
              };
+}
+
++ (NSValueTransformer *)urlJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
 + (NSValueTransformer *)avatarURLJSONTransformer {

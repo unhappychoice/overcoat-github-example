@@ -11,5 +11,6 @@
 @interface GithubUser : MTLModel <MTLJSONSerializing>
 @property (copy, nonatomic, readonly) NSNumber *userID;
 @property (copy, nonatomic, readonly) NSString *name;
+@property (copy, nonatomic, readonly) NSURL *url;
 @property (copy, nonatomic, readonly) NSURL *avatarURL;
 @end
