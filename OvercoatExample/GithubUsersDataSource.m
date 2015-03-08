@@ -12,6 +12,8 @@
 
 @implementation GithubUsersDataSource
 
+# pragma mark - lifecycle
+
 - (instancetype)initWithUsers:(NSArray *)users {
     self = [super init];
     if (self) {
@@ -19,6 +21,8 @@
     }
     return self;
 }
+
+# pragma mark - table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _users.count;

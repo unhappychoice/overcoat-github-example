@@ -10,6 +10,8 @@
 
 @implementation GithubUser
 
+# pragma mark - mantle
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"userID": @"id",

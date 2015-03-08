@@ -15,14 +15,22 @@
 
 @implementation UserViewController
 
+# pragma mark - lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.user.url];
-    [_webView loadRequest:request];
+    [self showUser];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+# pragma mark - private
+
+- (void)showUser {
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.user.url];
+    [_webView loadRequest:request];
 }
 
 @end

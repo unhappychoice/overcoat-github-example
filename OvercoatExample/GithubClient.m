@@ -13,10 +13,14 @@
 
 @implementation GithubClient
 
+# pragma mark - lifecycle
+
 - (instancetype)init {
     self = [super initWithBaseURL:[NSURL URLWithString:@"https://api.github.com/"]];
     return self;
 }
+
+# pragma mark - overcoat
 
 + (NSDictionary *)modelClassesByResourcePath {
     return @{
